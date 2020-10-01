@@ -13,7 +13,7 @@ Can you help me with that???
 
 The challenge mentions some files, and we are given a folder called *files*, which contains around 1000 files, of 31Kb each. It also mentions that the files were ciphered with a stream cipher, and that there are three files whose content format is kind of known. And the most important part, the keystream used along all the files was the same.
 
-A stream cipher is just a way of encrypting data, that consists of one simple step. We have the plain text that we want to encrypt, and a key stream that is basically a string that has the same length of the plain text. And the algorithm itself consists of doing an *XOR*, char by char, byte by byte, where each one of the plain text is *XORed* with the corresponding one in the keystream.
+A stream cipher is just a way of encrypting data, that consists of one simple step. We have the plain text that we want to encrypt, and a key stream that is basically a string that has the same length of the plain text. And the algorithm itself consists of doing an *XOR*, between each one of the plain text characters and the corresponding one in the keystream, and this is the encrypted string.
 
 The important thing to notice here is that *XOR* operation can be reversed. In our particular case, we have files that were encrypted with the same key, so for two different files we have the following:
 ```
